@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fuxia</title>
+    <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendors/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-animate.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-touch.min.js"></script>
+    <script type="text/javascript" src="/vendors/smart-table.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-datatables.min.js"></script>
+    <script type="text/javascript" src="/vendors/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/vendors/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts/clientapp.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/accountscontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/colorcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/floralaccentscontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/flowerdbcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/flowerscontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/gallerycontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/homecontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/galleryinputcontroller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/modal-controllers/flowersmodalCtrl.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/modal-controllers/faccents-modalCtrl.js"></script>
+
+    <link rel="stylesheet" href="/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style/stylesheet.css" />
+
+  </head>
+
+  <body ng-app="myApp">
+    <header ng-include="'/views/templates/header.html'">
+      <h1>fuxia</h1>
+    </header>
+
+    <main ng-view></main>
+  </body>
+  <footer ng-include="'/views/templates/footer.html'">
+    <h1>footer</h1>
+  </footer>
+
+</html>

@@ -1,0 +1,60 @@
+<div class="flowerdbHtml">
+
+  <h1>flower database</h1>
+
+  <section id="Flower">
+    <h2>Submit a Flower</h2>
+    <form id="flowerForm" name="flowerForm">
+      <input type="text" id="currentFlowerName" name="name" placeholder="flower name"
+        ng-focus="true" ng-model="currentFlower.name" />
+
+      <textarea type="text" id="currentFlowerDescription" name="description"
+      placeholder="description" ng-model="currentFlower.description"></textarea>
+
+      <textarea type="text" id="currentFlowerSymbolism" name="symbolism"
+      placeholder="symbolism" ng-model="currentFlower.symbolism"></textarea>
+
+      <textarea type="text" id="currentFlowerColorMeaning" name="colorMeaning"
+      placeholder="color meaning" ng-model="currentFlower.colorMeaning"></textarea>
+
+      <button ng-click="submitCurrentFlower()">Submit</button>
+  </section>
+
+  <section id="flowerList">
+    <table id="flowerTable">
+      <thead>
+        <tr>
+          <th class="fdbDeleteHeader">Delete</th>
+          <th class="fdbFlowerHeader">Flower</th>
+          <th class="fdbHeader1">Description</th>
+          <th class="fdbHeader1">Symbolism</th>
+          <th class="fdbHeader1">Color Meaning</th>
+          <th class="fdbImageHeader">Image</th>
+        </tr>
+      </thead>
+      <tr ng-repeat="flower in flowers">
+        <td><button id="deleteFlowerButton" type="button" name="deleteFlower"
+          ng-click="deleteFlower(flower._id)">delete</button></td>
+        <td>{{flower.name | limitTo: 100}}</td>
+        <td>{{flower.description | limitTo: 100}}</td>
+        <td>{{flower.symbolism | limitTo: 100}}</td>
+        <td>{{flower.colorMeaning | limitTo: 100}}</td>
+
+        <td id="tableImage"><button ng-click="imgShowInput(flower._id)">+img</button>
+          <div ng-show="displayedFlowerId == flower._id">
+            <form id="addImgForm" name="addImgForm">
+              <div class="inline">
+                <input type="text" placeholder="img" ng-model="newImage.image" />
+                <button class="addImage" ng-click="addImage(flower._id)">submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="thumbDiv">
+            <img class="dbThumb" ng-repeat="image in flower.images" ng-src="style/content/img/flowers/{{image.image}}.png" />
+          </div>
+        </td>
+
+      </tr>
+    </table>
+  </section>
+</div>

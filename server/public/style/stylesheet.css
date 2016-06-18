@@ -1,0 +1,411 @@
+#menu-bar {
+  text-align: center;
+  background-color: #eb75ac;
+  position: fixed;
+  top: 0;
+  height: 140px;
+  width: 100%;
+  z-index: 1;
+}
+
+#menu-bar h1 {
+  font-family:
+}
+
+#menu-bar .public {
+  float: left;
+  margin-left: 10px;
+}
+
+#menu-bar .admin {
+  float: right;
+  margin-right: 10px;
+}
+
+.public a {
+  color: white;
+  text-decoration:none !important;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.public a:hover {
+  color: yellow;
+}
+
+.admin a{
+  color: white;
+  text-decoration:none !important;
+  margin: 0 2px 0 2px;
+}
+
+.admin a:hover {
+  color:yellow;
+}
+
+.inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
+ .colorHtml, .accountsHtml {
+  padding: 120px 0 80px 0;
+}
+
+.homepage {
+  text-align: center;
+}
+
+.homeImage {
+  position: fixed;
+  top: 150px;
+  left: 33%;
+  width: 30%;
+}
+
+footer {
+  background-color: pink;
+}
+/*-----------------flowersdb------------------*/
+.flowerdbHtml {
+  background-image: url("./content/header-footer/vintageblueflowers.png");
+}
+
+#Flower {
+  background-color: white;
+  opacity: .90;
+}
+
+#flowerList {
+  background-color: white;
+  opacity: .98;
+}
+
+.flowerdbHtml h1 {
+  text-align: center;
+}
+
+#flowerTable {
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+#flowerTable th {
+  height: 20px;
+  background-color: #EB75AC;
+  border: 1px solid white;
+}
+
+#flowerTable tr:nth-child(odd) {
+  background: #FAD9E9;
+}
+
+#flowerTable td {
+  /*border: 0.5px solid #eb75ac;*/
+  border: none;
+  padding: 0 8px 0 8px;
+
+}
+
+.thumbDiv {
+  clear: both;
+  column-count: 2;
+  column-gap: 0.5em;
+}
+
+.dbThumb {
+  border: 0.5px solid grey;
+  display: inline;
+  width: 100%;
+  height: auto;
+
+}
+
+.galleryImage {
+  width: 150px;
+  height: auto;
+  border: 1px solid pink;
+  border-radius: 75px;
+}
+
+.inline > * {
+  float:left;
+  width: 45%;
+}
+
+#tableImage {
+  width: 12%;
+}
+
+.addImage {
+  font-size: 7px;
+}
+
+.fdbHeader1 {
+  width: 100px;
+}
+
+.fdbImageHeader {
+  width: 300px;
+}
+
+.fdbDeleteHeader {
+  width: 5px;
+  text-align: center;
+}
+
+.fdbFlowerHeader {
+  width: 25px;
+}
+
+/* ************************* Accounts view *************************/
+.accountsHtml h1 {
+  text-align: center;
+}
+
+#customerTable {
+  border-collapse: collapse;
+}
+
+#customerTable th, td {
+  border: 1px solid black;
+}
+
+#customerTable .aDelete {
+  width: 50px;
+}
+
+#customerTable .aFName, .aLName, .aEmail, .aPhone,
+  .aAddress {
+  width: 100px;
+}
+
+#customerTable .aEvent, .aEventDate {
+  width: 50px;
+}
+
+#customerTable .aComments {
+  width: 175px;
+}
+
+
+/*--------------------------------flowers view-------------------------------------*/
+.flowersHtml {
+  background-color: black;
+}
+
+.flowersHtml h1 {
+  text-align: center;
+  color: white;
+}
+
+
+.flowerImages {
+  position: relative;
+  width: 100%;
+  /*text-align: justify;
+  line-height: 0;*/
+}
+
+.flowersThumb {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  border-bottom: 1px solid black;
+  border-radius: 10%;
+  margin: 2.3%;;
+}
+
+
+/* *************************** ACCENTS page *********************** */
+.accentsHtml {
+  background-color: black;
+}
+
+.accentsHtml {
+  text-align: center;
+  color: white;
+}
+
+.accentImage, .greenImage {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  border-bottom: 1px solid black;
+  border-radius: 10%;
+  margin: 2.3%;;
+}
+
+/* ************************ INPUT page ************************** */
+.inputHtml {
+/*  background-image: url("./content/header-footer/vintageblueflowers.png");*/
+}
+
+#gallery, #accents, #greens {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#galleryList {
+  column-count: 2;
+}
+
+.inputHtml h1 {
+  text-align: center;
+}
+
+.galleryInputThumb {
+  width: 100px;
+  height: auto;
+}
+
+.eachArrangement {
+  width: 475px;
+}
+
+.arrangementComment {
+  display: inline;
+}
+
+#accentTable {
+  border-collapse: collapse;
+}
+
+#accentTable th, td {
+  border: 1px solid black;
+}
+
+#accentTable .name, .image {
+  width: 300px;
+}
+
+#greenTable {
+  border-collapse: collapse;
+}
+
+#greenTable th, td {
+  border: 1px solid black;
+}
+
+#greenTable .name, .image {
+  width: 300px;
+}
+
+.inputAccentThumb {
+  width: 50px;
+  height: auto;
+}
+
+.inputGreenThumb {
+  width: 50px;
+  height: auto;
+}
+
+/* ********************* GALLERY PAGE *******************/
+.galleryHtml {
+  background-color: black;
+}
+
+.galleryHtml h1 {
+  font-family: fantasy;
+  text-align: center;
+  color: white;
+}
+
+/* ************************ COLOR MEANINGS PAGE ****************/
+
+.colorHtml h1 {
+  text-align: center;
+}
+
+/*--------------------------------- SLIDER -------------------------------------------*/
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    height: 64px;
+    margin-top: -35px;
+    outline: medium none;
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    z-index: 5;
+}
+.arrow.prev {
+    left: 20px;
+    opacity: 0.2;
+    transition: all 0.2s linear 0s;
+}
+.arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    transition: all 0.2s linear 0s;
+}
+.arrow.prev:hover{
+    opacity:1;
+}
+.arrow.next:hover{
+    opacity:1;
+}
+
+.nav {
+    bottom: 10px;
+    display: block;
+    height: 48px;
+    left: 0;
+    margin: 0 auto;
+    padding: 1em 0 0.8em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+.nav li {
+    border: 3px solid #AAAAAA;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    height: 37px;
+    margin: 0 8px;
+    position: relative;
+    width: 50px;
+}
+.nav li.active {
+    border: 3px solid #FFFFFF;
+}
+.nav li img {
+    width: 100%;
+}
+
+.slider {
+    z-index: 3;
+    border: 15px solid #FFFFFF;
+    border-radius: 5px;
+    height: 457px;
+    margin: auto;
+    position: relative;
+    width: 630px;
+    padding: 0px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide.ng-hide-add {
+    opacity:1;
+}
+
+.slide.ng-hide-add.ng-hide-add-active {
+    opacity:0;
+}
+.slide.ng-hide-remove {
+    transition:2s linear all;
+
+    display:block!important;
+    opacity:0;
+}
+
+.slide, .slide.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+}

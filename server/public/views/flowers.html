@@ -1,0 +1,21 @@
+<div class="flowersHtml">
+
+
+<h1>Available Flowers</h1>
+
+<section id="sortButtons">
+  <p>sort by</p>
+  <button type="button" name="price"></button>
+  <button type="button" name="class"></button>
+  <button type="button" name="color"></button>
+</section>
+
+<section id="flowersDisplay">
+  <div class="flowerImages">
+    <img ng-repeat="sample in samples" class="flowersThumb"
+      ng-src="style/content/img/flowers/{{sample.image}}.png"
+      ng-click="displayFlowerModal(sample._id)" />
+  </div>
+</section>
+
+</div>
