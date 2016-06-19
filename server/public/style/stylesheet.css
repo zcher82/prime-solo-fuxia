@@ -1,6 +1,8 @@
+/* ************************** NAVIGATION / HEADER / FOOTER ***********************/
+
 #menu-bar {
   text-align: center;
-  background-color: #eb75ac;
+  background-color: #ffaa00;
   position: fixed;
   top: 0;
   height: 140px;
@@ -9,7 +11,8 @@
 }
 
 #menu-bar h1 {
-  font-family:
+  font-family: palatino;
+  font-size: 70px;
 }
 
 #menu-bar .public {
@@ -23,7 +26,8 @@
 }
 
 .public a {
-  color: white;
+  font-family: palatino;
+  color: black;
   text-decoration:none !important;
   margin-left: 2px;
   margin-right: 2px;
@@ -34,7 +38,8 @@
 }
 
 .admin a{
-  color: white;
+  font-family: palatino;
+  color: black;
   text-decoration:none !important;
   margin: 0 2px 0 2px;
 }
@@ -45,7 +50,7 @@
 
 .inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
  .colorHtml, .accountsHtml {
-  padding: 120px 0 80px 0;
+  padding: 130px 0 80px 0;
 }
 
 .homepage {
@@ -59,12 +64,88 @@
   width: 30%;
 }
 
-footer {
-  background-color: pink;
+.footerContainer {
+  position: relative;
+  text-align: center;
+  background-color: #ffaa00;
+  height: 50px;
 }
+
+.footerContainer p {
+  font-family: palatino;
+  position:;
+  bottom: 5px;
+}
+
+
+
+/*--------------------------------flowers view-------------------------------------*/
+.flowersHtml {
+  background-color: black;
+}
+
+.flowersHtml h1 {
+  font-family: palatino;
+  text-align: center;
+  color: white;
+}
+
+
+.flowerImages {
+  position: relative;
+  width: 100%;
+  /*text-align: justify;
+  line-height: 0;*/
+}
+
+.flowersThumb {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  border: 5px solid #ffaa00;
+  border-radius: 10%;
+  margin: 2.3%;;
+}
+
+
+/* *************************** ACCENTS page *********************** */
+.accentsHtml {
+  background-color: black;
+}
+
+.accentsHtml {
+  font-family: palatino;
+  text-align: center;
+  color: white;
+}
+
+.accentImage, .greenImage {
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  border: 5px solid #ffaa00;
+  border-radius: 10%;
+  margin: 2.3%;;
+}
+
+
+
+/* ********************* GALLERY PAGE *******************/
+.galleryHtml {
+  background-color: black;
+}
+
+/* ************************ COLOR MEANINGS PAGE ****************/
+
+.colorHtml h1 {
+  text-align: center;
+}
+
+
 /*-----------------flowersdb------------------*/
 .flowerdbHtml {
-  background-image: url("./content/header-footer/vintageblueflowers.png");
+  /*background-image: url("./content/header-footer/vintageblueflowers.png");*/
+  background-color: black;
 }
 
 #Flower {
@@ -78,7 +159,9 @@ footer {
 }
 
 .flowerdbHtml h1 {
+  font-family: palatino;
   text-align: center;
+  color: white;
 }
 
 #flowerTable {
@@ -156,83 +239,7 @@ footer {
   width: 25px;
 }
 
-/* ************************* Accounts view *************************/
-.accountsHtml h1 {
-  text-align: center;
-}
 
-#customerTable {
-  border-collapse: collapse;
-}
-
-#customerTable th, td {
-  border: 1px solid black;
-}
-
-#customerTable .aDelete {
-  width: 50px;
-}
-
-#customerTable .aFName, .aLName, .aEmail, .aPhone,
-  .aAddress {
-  width: 100px;
-}
-
-#customerTable .aEvent, .aEventDate {
-  width: 50px;
-}
-
-#customerTable .aComments {
-  width: 175px;
-}
-
-
-/*--------------------------------flowers view-------------------------------------*/
-.flowersHtml {
-  background-color: black;
-}
-
-.flowersHtml h1 {
-  text-align: center;
-  color: white;
-}
-
-
-.flowerImages {
-  position: relative;
-  width: 100%;
-  /*text-align: justify;
-  line-height: 0;*/
-}
-
-.flowersThumb {
-  display: inline-block;
-  width: 20%;
-  height: auto;
-  border-bottom: 1px solid black;
-  border-radius: 10%;
-  margin: 2.3%;;
-}
-
-
-/* *************************** ACCENTS page *********************** */
-.accentsHtml {
-  background-color: black;
-}
-
-.accentsHtml {
-  text-align: center;
-  color: white;
-}
-
-.accentImage, .greenImage {
-  display: inline-block;
-  width: 20%;
-  height: auto;
-  border-bottom: 1px solid black;
-  border-radius: 10%;
-  margin: 2.3%;;
-}
 
 /* ************************ INPUT page ************************** */
 .inputHtml {
@@ -299,22 +306,36 @@ footer {
   height: auto;
 }
 
-/* ********************* GALLERY PAGE *******************/
-.galleryHtml {
-  background-color: black;
-}
-
-.galleryHtml h1 {
-  font-family: fantasy;
-  text-align: center;
-  color: white;
-}
-
-/* ************************ COLOR MEANINGS PAGE ****************/
-
-.colorHtml h1 {
+/* ************************* Accounts view *************************/
+.accountsHtml h1 {
   text-align: center;
 }
+
+#customerTable {
+  border-collapse: collapse;
+}
+
+#customerTable th, td {
+  border: 1px solid black;
+}
+
+#customerTable .aDelete {
+  width: 50px;
+}
+
+#customerTable .aFName, .aLName, .aEmail, .aPhone,
+  .aAddress {
+  width: 100px;
+}
+
+#customerTable .aEvent, .aEventDate {
+  width: 50px;
+}
+
+#customerTable .aComments {
+  width: 175px;
+}
+
 
 /*--------------------------------- SLIDER -------------------------------------------*/
 
@@ -370,7 +391,7 @@ footer {
     width: 50px;
 }
 .nav li.active {
-    border: 3px solid #FFFFFF;
+    border: 3px solid #ffaa00;
 }
 .nav li img {
     width: 100%;
@@ -378,13 +399,25 @@ footer {
 
 .slider {
     z-index: 3;
-    border: 15px solid #FFFFFF;
+    border: 15px solid #ffaa00;
     border-radius: 5px;
     height: 457px;
-    margin: auto;
+    margin: 75px auto;
     position: relative;
     width: 630px;
     padding: 0px;
+
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .slide {
@@ -394,6 +427,17 @@ footer {
 }
 .slide.ng-hide-add {
     opacity:1;
+
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+
+    -webkit-transform-origin: right top 0;
+    -moz-transform-origin: right top 0;
+    -ms-transform-origin: right top 0;
+    -o-transform-origin: right top 0;
+    transform-origin: right top 0;
 }
 
 .slide.ng-hide-add.ng-hide-add-active {

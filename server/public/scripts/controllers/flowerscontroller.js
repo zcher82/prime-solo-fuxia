@@ -23,9 +23,11 @@ app.controller('FlowersController', ['$scope', '$http', '$modal', function($scop
             $scope.photos.push(value);
           });
         });
-
+      
       });
   }
+
+
 
 
   $scope.displayFlowerModal = function(id) {
