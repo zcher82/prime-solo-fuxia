@@ -27,9 +27,9 @@ app.use('/galleryinput', galleryinput);
 
 // mongoose connection
 
-var databaseURI = 'mongodb://zcher82:fuxia@ds025772.mlab.com:25772/heroku_vcfx7trf';
+var databaseURI = '';
 
-/*// process.env.MONGODB_URI will only be defined if you
+// process.env.MONGODB_URI will only be defined if you
 // are running on Heroku
 if(process.env.MONGODB_URI != undefined) {
     // use the string value of the environment variable
@@ -37,7 +37,7 @@ if(process.env.MONGODB_URI != undefined) {
 } else {
     // use the local database server
     databaseURI = 'mongodb://localhost:27017/fuxia';
-}*/
+}
 
 
 mongoose.connect(databaseURI);
