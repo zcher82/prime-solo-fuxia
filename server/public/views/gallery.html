@@ -1,23 +1,24 @@
 <div class="galleryHtml">
 
-<section id="gallerySlider">
+<h1>Photo Gallery</h1>
+  <section id="gallerySlider">
 
 
-    <div class="container slider">
-        <img ng-repeat="arrangement in arrangements" class="slide" ng-swipe-right="showPrev()"
-          ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="style/content/slider/{{arrangement.image}}.png" />
+      <div class="container slider">
+          <img ng-repeat="arrangement in arrangements" class="slide" ng-swipe-right="showPrev()"
+            ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="style/content/slider/{{arrangement.image}}.png" />
 
-        <img class="arrow prev" src="./style/content/slider/leftwhite.png"
-          ng-click="showPrev()"></img>
-        <img class="arrow next" src="./style/content/slider/rightwhite.png"
-          ng-click="showNext()"></img>
+          <img class="arrow prev" src="./style/content/slider/leftwhite.png"
+            ng-click="showPrev()"></img>
+          <img class="arrow next" src="./style/content/slider/rightwhite.png"
+            ng-click="showNext()"></img>
 
-        <ul class="nav">
-            <li ng-repeat="arrangement in arrangements" ng-class="{'active':isActive($index)}">
-                <img ng-src="style/content/slider/{{arrangement.image}}.png" ng-click="showArrangement($index);" />
-            </li>
-        </ul>
-    </div>
+          <ul class="nav">
+              <li ng-repeat="arrangement in arrangements" ng-class="{'active':isActive($index)}">
+                  <img ng-src="style/content/slider/{{arrangement.image}}.png" ng-click="showArrangement($index);" />
+              </li>
+          </ul>
+      </div>
 
 </section>
 

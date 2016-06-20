@@ -1,29 +1,38 @@
 <div class="accountsHtml">
 
-<h1>Customer Accounts</h1>
+<h2>Customer Accounts</h2>
 
 
   <section id="customerSubmission">
-    <h2 class="h2customerSubmission">Create new customer</h2>
+    <h3 class="h2customerSubmission">Create new customer</h3><br>
     <form id="customerForm" name="customerForm">
+      <label for="firstname">First Name</label>
       <input type="text" id="firstName" name="firstName" placeholder="First Name" ng-model="currentCustomer.firstName" />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="lastname">Last Name</label>
       <input type="text" id="lastName" name="lastName" placeholder="Last Name" ng-model="currentCustomer.lastName" />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="email">Email</label>
       <input type="tel" id="email" name="email" placeholder="Email" ng-model="currentCustomer.email" />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="phone">Phone</label>
       <input type="tel" id="phone" name="phone" placeholder="phone" ng-model="currentCustomer.phone" />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="address">Address</label>
       <input type="text" id="address" name="address" placeholder="address" ng-model="currentCustomer.address" />
-
+      <br>
+      <label for="event">Event</label>
       <input type="text" id="event" name="event" placeholder="event" ng-model="currentCustomer.event" />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="eventdate">Event Date</label>
       <input type="date" id="eventDate" name="eventDate" placeholder="event date" ng-model="currentCustomer.eventDate" />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="comments">Comments</label>
       <textarea type="text" id="comments" name="comments" placeholder="comments" ng-model="currentCustomer.comments"></textarea>
-
+      &nbsp&nbsp&nbsp&nbsp
       <button ng-click="submitCurrentCustomer()">create</button>
   </section>
+  <br><br>
 
   <section id="customerList">
     <table id="customerTable" datatable="ng" dt-options="dtOptions">
@@ -36,7 +45,7 @@
           <th class="aPhone">Phone</th>
           <th class="aAddress">Address</th>
           <th class="aEvent">Event</th>
-          <th class="AEventDate">Event Date</th>
+          <th class="aEventDate">Event Date</th>
           <th class="aComments">Comments</th>
         </tr>
       </thead>

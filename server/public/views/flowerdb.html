@@ -1,22 +1,24 @@
 <div class="flowerdbHtml">
 
-  <h1>Flower Database</h1>
-
-  <section id="Flower">
-    <h2>Submit a Flower</h2>
+  <section id="submitFlower">
+    <h2>Submit a Flower</h2><br>
     <form id="flowerForm" name="flowerForm">
+      <label for="flowerName">Name</label>
       <input type="text" id="currentFlowerName" name="name" placeholder="flower name"
-        ng-focus="true" ng-model="currentFlower.name" />
+        ng-focus="true" ng-model="currentFlower.name" /><br>
 
+      <label for="description">Description</label>
       <textarea type="text" id="currentFlowerDescription" name="description"
-      placeholder="description" ng-model="currentFlower.description"></textarea>
-
+        placeholder="description" ng-model="currentFlower.description"></textarea>
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="symbolism">Symbolism</label>
       <textarea type="text" id="currentFlowerSymbolism" name="symbolism"
-      placeholder="symbolism" ng-model="currentFlower.symbolism"></textarea>
-
+        placeholder="symbolism" ng-model="currentFlower.symbolism"></textarea>
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="colorMeaning">Color Meaning</label>
       <textarea type="text" id="currentFlowerColorMeaning" name="colorMeaning"
-      placeholder="color meaning" ng-model="currentFlower.colorMeaning"></textarea>
-
+        placeholder="color meaning" ng-model="currentFlower.colorMeaning"></textarea>
+      &nbsp&nbsp&nbsp&nbsp
       <button ng-click="submitCurrentFlower()">Submit</button>
   </section>
 

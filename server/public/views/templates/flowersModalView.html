@@ -1,11 +1,13 @@
-<div class="modal-header">
-    <h3>{{correctFlower.name}}</h3>
-</div>
-<div class="modal-body">
-    <p>Description: {{correctFlower.description}}</p>
-    <p>Symbolism: {{correctFlower.symbolism}}</p>
-    <p>Color Meaning: {{correctFlower.colorMeaning}}</p>
-</div>
-<div class="modal-footer">
-    <button class="btn btn-info" ng-click="closeModal()">Close</button>
+<div class="modalContainer">
+  <div class="modal-header">
+      <h3>{{correctFlower.name}}</h3>
+  </div>
+  <div class="modal-body">
+      <h4>Description: </h4><p>{{correctFlower.description}}</p>
+      <h4>Symbolism: </h4><p>{{correctFlower.symbolism}}</p>
+      <h4>Color Meaning: </h4><p>{{correctFlower.colorMeaning}}</p>
+  </div>
+  <div class="modal-footer">
+      <button class="btn btn-info" ng-click="closeModal()">Close</button>
+  </div>
 </div>

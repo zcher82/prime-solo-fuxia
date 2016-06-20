@@ -29,7 +29,6 @@ app.controller('FlowerdbController', ['$scope', '$http', function($scope, $http)
         $scc.description = "";
         $scc.symbolism = "";
         $scc.colorMeaning = "";
-        // $scope.flowerForm.$setPristine();
       });
   };
 
@@ -57,7 +56,6 @@ app.controller('FlowerdbController', ['$scope', '$http', function($scope, $http)
 
         //clear input field
         $scope.newImage.image = "";
-        // $scope.addImgForm.$setPristine();
       });
   };
 

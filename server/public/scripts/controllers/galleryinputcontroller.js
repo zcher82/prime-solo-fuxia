@@ -26,7 +26,6 @@ app.controller('GalleryInputController', ['$scope', '$http', function($scope, $h
         var $scc = $scope.newArrangement;
         $scc.image = "";
         $scc.description = "";
-        // $scope.flowerForm.$setPristine();
       });
   };
 
@@ -60,7 +59,6 @@ app.controller('GalleryInputController', ['$scope', '$http', function($scope, $h
         var $scc = $scope.newAccent;
         $scc.name = "";
         $scc.image = "";
-        // $scope.flowerForm.$setPristine();
       });
   };
 
@@ -94,7 +92,6 @@ app.controller('GalleryInputController', ['$scope', '$http', function($scope, $h
         var $scc = $scope.newGreen;
         $scc.name = "";
         $scc.image = "";
-        // $scope.flowerForm.$setPristine();
       });
   };
 

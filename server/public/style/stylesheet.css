@@ -1,93 +1,125 @@
 /* ************************** NAVIGATION / HEADER / FOOTER ***********************/
 
-#menu-bar {
+.headerContainer {
+  width: 140px;
+  position: relative;
   text-align: center;
-  background-color: #ffaa00;
+}
+
+.menu-bar {
+  text-align: center;
+  background-color: #ff7d93;
   position: fixed;
   top: 0;
-  height: 140px;
+  height: 50px;
   width: 100%;
   z-index: 1;
 }
 
-#menu-bar h1 {
+.menu-bar h1 {
   font-family: palatino;
   font-size: 70px;
 }
 
-#menu-bar .public {
+.menu-bar .public {
   float: left;
-  margin-left: 10px;
+  margin: 20px 0 0 20px;
 }
 
-#menu-bar .admin {
+.menu-bar .admin {
   float: right;
-  margin-right: 10px;
+  margin: 20px 20px 0 0;
 }
 
 .public a {
+  font-size: 18px;
   font-family: palatino;
   color: black;
   text-decoration:none !important;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin: 0 10px 0 10px;
 }
 
 .public a:hover {
-  color: yellow;
+  color: white;
 }
 
 .admin a{
+  font-size: 18px;
   font-family: palatino;
   color: black;
   text-decoration:none !important;
-  margin: 0 2px 0 2px;
+  margin: 0 10px 0 10px;
 }
 
 .admin a:hover {
-  color:yellow;
+  color: white;
 }
 
-.inputHtml, .galleryHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
+.inputHtml, .flowersHtml, .flowerdbHtml, .accentsHtml,
  .colorHtml, .accountsHtml {
-  padding: 130px 0 80px 0;
+  padding: 50px 0 60px 0;
 }
 
 .homepage {
   text-align: center;
+  background-color: white;
+  z-index: 5;
 }
 
-.homeImage {
+/*.homeImage {
   position: fixed;
   top: 150px;
   left: 33%;
-  width: 30%;
+  width: 100%;
+}*/
+
+.homeImage {
+  width: 40%;
 }
 
 .footerContainer {
   position: relative;
   text-align: center;
-  background-color: #ffaa00;
-  height: 50px;
+  background-color: #ff7d93;
+  height: 30px;
 }
 
 .footerContainer p {
   font-family: palatino;
-  position:;
-  bottom: 5px;
+  position: relative;
+  top: 4px;
 }
 
+/* *************************** HOME PAGE ****************************/
 
+.homepage {
+  padding-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.homepage h1 {
+  font-family: palatino;
+  font-size: 80px;
+}
+
+.public .home:hover {
+  color: #E80C73;
+}
+
+.admin .home:hover {
+  color: #E80C73;
+}
 
 /*--------------------------------flowers view-------------------------------------*/
 .flowersHtml {
-  background-color: black;
+  background-color: white;
 }
 
 .flowersHtml h1 {
   font-family: palatino;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 
@@ -102,7 +134,7 @@
   display: inline-block;
   width: 20%;
   height: auto;
-  border: 5px solid #ffaa00;
+  border: 5px solid #E80C73;
   border-radius: 10%;
   margin: 2.3%;;
 }
@@ -110,20 +142,20 @@
 
 /* *************************** ACCENTS page *********************** */
 .accentsHtml {
-  background-color: black;
+  background-color: white;
 }
 
 .accentsHtml {
   font-family: palatino;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .accentImage, .greenImage {
   display: inline-block;
   width: 20%;
   height: auto;
-  border: 5px solid #ffaa00;
+  border: 5px solid #E80C73;
   border-radius: 10%;
   margin: 2.3%;;
 }
@@ -132,7 +164,21 @@
 
 /* ********************* GALLERY PAGE *******************/
 .galleryHtml {
-  background-color: black;
+  text-align: center;
+  font-family: palatino;
+  color: black;
+  background-color: white;
+  height: 700px;
+}
+
+.galleryHtml h1 {
+  position: relative;
+  top: 50px;
+}
+
+#gallerySlider {
+  position: relative;
+  top: 10px;
 }
 
 /* ************************ COLOR MEANINGS PAGE ****************/
@@ -142,20 +188,34 @@
 }
 
 
-/*-----------------flowersdb------------------*/
+/*-----------------flowers db------------------*/
 .flowerdbHtml {
-  /*background-image: url("./content/header-footer/vintageblueflowers.png");*/
-  background-color: black;
+  background-color: white;
+  font-family: palatino;
 }
 
-#Flower {
+.flowerdbHtml button {
+  border: 2px solid white;
+  border-radius: 3px;
+  background-color: #FF7D93;
+}
+
+#submitFlower {
   background-color: white;
   opacity: .90;
+  margin: 20px;
 }
+
+#submitFlower h2 {
+  text-align: center;
+}
+
 
 #flowerList {
   background-color: white;
   opacity: .98;
+  margin: 20px;
+
 }
 
 .flowerdbHtml h1 {
@@ -172,9 +232,10 @@
 }
 
 #flowerTable th {
-  height: 20px;
-  background-color: #EB75AC;
-  border: 1px solid white;
+  height: 30px;
+  background-color: #E80C73;
+  border: 1px solid black;
+  color: white;
 }
 
 #flowerTable tr:nth-child(odd) {
@@ -205,7 +266,7 @@
 .galleryImage {
   width: 150px;
   height: auto;
-  border: 1px solid pink;
+  border: 1px solid #E80C73;
   border-radius: 75px;
 }
 
@@ -224,10 +285,12 @@
 
 .fdbHeader1 {
   width: 100px;
+  padding-left: 20px;
 }
 
 .fdbImageHeader {
   width: 300px;
+  padding-left: 20px;
 }
 
 .fdbDeleteHeader {
@@ -237,17 +300,25 @@
 
 .fdbFlowerHeader {
   width: 25px;
+  padding-left: 20px;
 }
 
 
 
 /* ************************ INPUT page ************************** */
 .inputHtml {
-/*  background-image: url("./content/header-footer/vintageblueflowers.png");*/
+font-family: palatino;
+}
+
+.inputHtml button {
+  background-color: #FF7D93;
+  border: 2px solid white;
+  border-radius: 3px;
 }
 
 #gallery, #accents, #greens {
-  border: 2px solid black;
+  border: 2px solid #E80C73;
+  margin: 20px;
   padding: 10px;
 }
 
@@ -255,13 +326,15 @@
   column-count: 2;
 }
 
-.inputHtml h1 {
+.inputHtml h2 {
   text-align: center;
 }
 
 .galleryInputThumb {
   width: 100px;
   height: auto;
+  border: 1px solid #E80C73;
+  margin: 2px;
 }
 
 .eachArrangement {
@@ -274,66 +347,114 @@
 
 #accentTable {
   border-collapse: collapse;
-}
-
-#accentTable th, td {
   border: 1px solid black;
 }
 
+#accentTable th {
+  height: 50px;
+  background-color: #E80C73;
+  border: 1px solid black;
+  color: white;
+}
+
 #accentTable .name, .image {
+  padding-left: 20px;
   width: 300px;
+}
+
+#accentTable tr:nth-child(even) {
+  background: pink;
 }
 
 #greenTable {
   border-collapse: collapse;
+  border; 1px solid black;
 }
 
-#greenTable th, td {
+#greenTable th {
+  height: 50px;
+  background-color: #E80C73;
   border: 1px solid black;
+  color: white;
 }
 
 #greenTable .name, .image {
   width: 300px;
+  padding-left: 20px;
+}
+
+#greenTable tr:nth-child(even) {
+  background: pink;
 }
 
 .inputAccentThumb {
   width: 50px;
   height: auto;
+  border: 2px solid #E80C73;
 }
 
 .inputGreenThumb {
   width: 50px;
   height: auto;
+  border: 2px solid #E80C73;
 }
 
 /* ************************* Accounts view *************************/
-.accountsHtml h1 {
+.accountsHtml {
+  font-family: palatino;
+}
+
+#customerSubmission, #customerList {
+  margin: 20px;
+}
+
+.accountsHtml button {
+  background-color: #ff7d93;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.accountsHtml h2 {
   text-align: center;
 }
 
 #customerTable {
   border-collapse: collapse;
-}
-
-#customerTable th, td {
   border: 1px solid black;
 }
 
-#customerTable .aDelete {
-  width: 50px;
+#customerTable th {
+  height: 50px;
+  background-color: #E80C73;
+  border: 1px solid black;
+  color: white;
+  padding: 8px;
 }
 
-#customerTable .aFName, .aLName, .aEmail, .aPhone,
-  .aAddress {
+#customerTable tr:nth-child(even) {
+  background: #FFBDDD;
+}
+
+.aFName, .aLName {
   width: 100px;
 }
 
-#customerTable .aEvent, .aEventDate {
-  width: 50px;
+.aEventDate, .aPhone, .aEvent {
+  width: 135px;
 }
 
-#customerTable .aComments {
-  width: 175px;
+.aAddress, .aEmail {
+  width: 180px;
+}
+
+/* ********************** MODALS *********************/
+
+.modalContainer {
+  border: 5px solid #ffaa00;
+}
+
+.modalContainer h3, p {
+  font-family: palatino;
 }
 
 
@@ -399,25 +520,13 @@
 
 .slider {
     z-index: 3;
-    border: 15px solid #ffaa00;
+    border: 15px solid black;
     border-radius: 5px;
     height: 457px;
     margin: 75px auto;
     position: relative;
     width: 630px;
     padding: 0px;
-
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    -ms-perspective: 1000px;
-    -o-perspective: 1000px;
-    perspective: 1000px;
-
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
 
 .slide {
@@ -427,17 +536,7 @@
 }
 .slide.ng-hide-add {
     opacity:1;
-
-    -webkit-transition:1s linear all;
-    -moz-transition:1s linear all;
-    -o-transition:1s linear all;
     transition:1s linear all;
-
-    -webkit-transform-origin: right top 0;
-    -moz-transform-origin: right top 0;
-    -ms-transform-origin: right top 0;
-    -o-transform-origin: right top 0;
-    transform-origin: right top 0;
 }
 
 .slide.ng-hide-add.ng-hide-add-active {

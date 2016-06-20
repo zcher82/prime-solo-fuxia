@@ -47,36 +47,4 @@ app.controller('FloralAccentsController', ['$scope', '$http', '$modal', function
     });
   };
 
-
-  /*$scope.displayAccentsModal = function(id) {
-    var correctAccent = {};
-    var correctGreen = {};
-    console.log('1st', id);
-    angular.forEach($scope.accents, function (accent) {
-      if (id === accent._id) {
-        console.log(accent);
-        correctAccent = accent;
-        console.log(correctAccent);
-      }
-    });
-    angular.forEach($scope.greens, function (green) {
-      if (id === green._id) {
-        correctGreen = green;
-      }
-    });
-    var modalInstance = $modal.open({
-      templateUrl: '../views/templates/accentsModalView.html',
-      controller: 'AccentsModalCtrl',
-      resolve: {
-        correctAccent: function() {
-          return correctAccent;
-        },
-        correctGreen: function() {
-          return correctGreen;
-        }
-      }
-    });
-  };*/
-
-
 }]);

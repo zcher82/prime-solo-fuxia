@@ -12,10 +12,6 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/accounts.html',
       controller: 'AccountsController'
     })
-    .when('/color', {
-      templateUrl: '/views/color.html',
-      controller: 'ColorController'
-    })
     .when('/floralaccents', {
       templateUrl: '/views/floralaccents.html',
       controller: 'FloralAccentsController'

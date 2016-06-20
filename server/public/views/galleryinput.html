@@ -1,21 +1,26 @@
 <div class="inputHtml">
 
-<h1>gallery input</h1>
+<h2>Gallery &#8226 Accents &#8226 Greens Database</h2>
 
 <section id=gallery>
   <section id="submitGalleryImage">
     <h3>Arrangements in database</h3>
     <p>Add arrangement images:</p>
     <form id="galleryAddImgForm" name="galleryAddImgForm">
+        <label for="image">Arrangement Image</label>
         <input type="text" name="image" placeholder="Arrangement image"
         ng-model="newArrangement.image" />
-
+        &nbsp&nbsp&nbsp&nbsp
+        <label for="description">Description</label>
         <input type="text" name="description" placeholder="Description"
           ng-model="newArrangement.description"  />
 
         <button class="addArrangement" ng-click="addArrangement()">submit</button>
     </form>
   </section>
+
+  <br>
+  <br>
 
   <section id="galleryList">
 
@@ -37,15 +42,17 @@
     <h3>Floral Accents in database</h3>
     <p>Add floral accents:</p>
     <form id="accentAddImgForm" name="accentAddImgForm">
+      <label for="name">Name</label>
       <input type="text" name="name" placeholder="name"
         ng-model="newAccent.name"  />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="image">Accent Image</label>
       <input type="text" name="image" placeholder="Accent image" ng-model="newAccent.image" />
 
       <button class="addAccent" ng-click="addAccent()">submit</button>
     </form>
   </section>
-
+  <br><br>
   <section id="accentList">
 
     <table id="accentTable" st-table="accentsGhost" st-safe-src="accents">
@@ -59,8 +66,8 @@
       <tr ng-repeat="accent in accentsGhost">
         <td><button id="deleteAccentButton" type="button" name="deleteAccent"
           ng-click="deleteAccent(accent._id)">delete</button></td>
-        <td>{{accent.name}}</td>
-        <td><img class="inputAccentThumb" ng-src="style/content/img/accents/{{accent.image}}.png" /></td>
+        <td class="name">{{accent.name}}</td>
+        <td class="name"><img class="inputAccentThumb" ng-src="style/content/img/accents/{{accent.image}}.png" /></td>
       </tr>
     </table>
   </section>
@@ -74,18 +81,20 @@
 <section id=greens>
 
   <section id="submitGreen">
-    <h3>Greens/Leave/Branches in database</h3>
+    <h3>Greens/Leaves/Branches in database</h3>
     <p>Add greens/leaves/branches:</p>
     <form id="greenAddImgForm" name="greenAddImgForm">
+      <label for="name">Name</label>
       <input type="text" name="name" placeholder="Name"
         ng-model="newGreen.name"  />
-
+      &nbsp&nbsp&nbsp&nbsp
+      <label for="greens image">Green Image</label>
       <input type="text" name="image" placeholder="Green image" ng-model="newGreen.image" />
 
       <button class="addAccent" ng-click="addGreen()">submit</button>
     </form>
   </section>
-
+  <br><br>
   <section id="greenList">
 
     <table id="greenTable" st-table="greensGhost" st-safe-src="greens">
