@@ -368,7 +368,7 @@ font-family: palatino;
 
 #greenTable {
   border-collapse: collapse;
-  border; 1px solid black;
+  border: 1px solid black;
 }
 
 #greenTable th {
@@ -391,12 +391,14 @@ font-family: palatino;
   width: 50px;
   height: auto;
   border: 2px solid #E80C73;
+  margin: 2px;
 }
 
 .inputGreenThumb {
   width: 50px;
   height: auto;
   border: 2px solid #E80C73;
+  margin: 2px;
 }
 
 /* ************************* Accounts view *************************/

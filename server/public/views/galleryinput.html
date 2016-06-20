@@ -1,6 +1,7 @@
 <div class="inputHtml">
 
-<h2>Gallery &#8226 Accents &#8226 Greens Database</h2>
+<h2>Gallery &#8226 Accents &#8226 Greens</h2>
+<h2>Database</h2>
 
 <section id=gallery>
   <section id="submitGalleryImage">
@@ -108,8 +109,8 @@
       <tr ng-repeat="green in greensGhost">
         <td><button id="deleteGreenButton" type="button" name="deleteGreen"
           ng-click="deleteGreen(green._id)">delete</button></td>
-        <td>{{green.name}}</td>
-        <td><img class="inputGreenThumb" ng-src="style/content/img/greens/{{green.image}}.png" /></td>
+        <td class="name">{{green.name}}</td>
+        <td class="name"><img class="inputGreenThumb" ng-src="style/content/img/greens/{{green.image}}.png" /></td>
       </tr>
     </table>
   </section>
