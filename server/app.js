@@ -5,7 +5,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var moment = require('moment');
 
-
+var passport = require('./strategies/userStrategy');
+var session = require('express-session');
 
 // modules
 var accounts = require('./routes/accounts');
@@ -19,11 +20,25 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Passport Session Configuration //
+app.use(session({
+   secret: 'secret',
+   key: 'user',
+   resave: 'true',
+   saveUninitialized: false,
+   cookie: { maxage: 60000, secure: false }
+}));
+
+// start up passport sessions
+app.use(passport.initialize());
+app.use(passport.session());
+
 // express routes
 app.use('/accounts', accounts);
 app.use('/accents', accents);
 app.use('/flowerdb', flowerdb);
 app.use('/galleryinput', galleryinput);
+
 
 // mongoose connection
 

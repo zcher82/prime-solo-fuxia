@@ -32,8 +32,17 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/galleryinput.html',
       controller: 'GalleryInputController'
     })
+    .when('/register', {
+      templateUrl: '/views/register.html',
+      controller: "LoginController"
+    })
+    .when('/user', {
+    templateUrl: '/views/user.html',
+    controller: "UserController"
+  })
     .otherwise({
       redirectTo: '/home'
     })
+
 
 }]);
