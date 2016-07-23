@@ -1,4 +1,12 @@
 /* ************************** NAVIGATION / HEADER / FOOTER ***********************/
+/** {
+  border: 1px dotted blue;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .headerContainer {
   width: 140px;
@@ -65,13 +73,6 @@
   background-color: white;
   z-index: 5;
 }
-
-/*.homeImage {
-  position: fixed;
-  top: 150px;
-  left: 33%;
-  width: 100%;
-}*/
 
 .homeImage {
   width: 40%;

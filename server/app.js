@@ -13,7 +13,8 @@ var accounts = require('./routes/accounts');
 var accents = require('./routes/accents');
 var flowerdb = require('./routes/flowerdb');
 var galleryinput = require('./routes/galleryinput');
-
+var index = require('./routes/index');
+var register = require('./routes/register');
 
 // middleware
 app.use(express.static(path.join(__dirname, './public')));
@@ -38,6 +39,8 @@ app.use('/accounts', accounts);
 app.use('/accents', accents);
 app.use('/flowerdb', flowerdb);
 app.use('/galleryinput', galleryinput);
+app.use('/index', index);
+app.use('/register', register);
 
 
 // mongoose connection

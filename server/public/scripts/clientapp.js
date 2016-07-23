@@ -4,10 +4,22 @@ app.constant('moment', moment);
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .when('/home', {
-      templateUrl: '/views/home.html',
-      controller: 'HomeController'
+    .when('/login', {
+      templateUrl: '/views/login.html',
+      controller: 'LoginController'
     })
+    .when('/register', {
+      templateUrl: '/views/register.html',
+      controller: "LoginController"
+    })
+    .when('/user', {
+    templateUrl: '/views/user.html',
+    controller: "UserController"
+    })
+    // .when('/home', {
+    //   templateUrl: '/views/home.html',
+    //   controller: 'HomeController'
+    // })
     .when('/accounts', {
       templateUrl: '/views/accounts.html',
       controller: 'AccountsController'
@@ -32,16 +44,9 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/galleryinput.html',
       controller: 'GalleryInputController'
     })
-    .when('/register', {
-      templateUrl: '/views/register.html',
-      controller: "LoginController"
-    })
-    .when('/user', {
-    templateUrl: '/views/user.html',
-    controller: "UserController"
-  })
+
     .otherwise({
-      redirectTo: '/home'
+      redirectTo: '/login'
     })
 
 

@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var Users = require('../models/user');
+var BasketSchema = require('../models/basket');
+var AccountSchema = require('../models/account');
 var path = require('path');
 
 // Handles request for HTML file
