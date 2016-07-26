@@ -1,4 +1,4 @@
-app.controller('UserController', ['$scope', '$http', '$window', '$location', function($scope, $http, $window, $location) {
+app.controller('UserlandingController', ['$scope', '$http', '$window', '$location', function($scope, $http, $window, $location) {
 
   $scope.userInfo = {};
 

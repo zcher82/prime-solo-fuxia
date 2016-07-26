@@ -15,6 +15,7 @@ var flowerdb = require('./routes/flowerdb');
 var galleryinput = require('./routes/galleryinput');
 var index = require('./routes/index');
 var register = require('./routes/register');
+var userlanding = require('./routes/userlanding');
 
 // middleware
 app.use(express.static(path.join(__dirname, './public')));
@@ -41,6 +42,7 @@ app.use('/flowerdb', flowerdb);
 app.use('/galleryinput', galleryinput);
 app.use('/index', index);
 app.use('/register', register);
+app.use('/userlanding', userlanding);
 
 
 // mongoose connection

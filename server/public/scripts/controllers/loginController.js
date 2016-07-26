@@ -10,11 +10,11 @@ app.controller('LoginController', ['$scope', '$http', '$window', '$location', fu
         $scope.message = "Enter your username and password!";
       } else {
         console.log('sending to server...', $scope.user);
-        $http.post('/', $scope.user).then(function(response) {
+        $http.post('/index', $scope.user).then(function(response) {
           if(response.data.username) {
             console.log('success: ', response.data);
             // location works with SPA (ng-route)
-            $location.path('/user');
+            $location.path('/userlanding');
           } else {
             console.log('failure: ', response);
             $scope.message = "Wrong!!";

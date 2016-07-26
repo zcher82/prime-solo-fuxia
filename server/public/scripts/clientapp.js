@@ -12,9 +12,9 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/register.html',
       controller: "LoginController"
     })
-    .when('/user', {
-    templateUrl: '/views/user.html',
-    controller: "UserController"
+    .when('/userlanding', {
+    templateUrl: '/views/userlanding.html',
+    controller: "UserlandingController"
     })
     // .when('/home', {
     //   templateUrl: '/views/home.html',

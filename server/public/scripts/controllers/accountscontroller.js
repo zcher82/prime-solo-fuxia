@@ -1,4 +1,4 @@
-app.controller('AccountsController', ['$scope', '$http', 'moment', 'DTOptionsBuilder', function($scope, $http, moment, DTOptionsBuilder) {
+app.controller('AccountsController', ['$scope', '$http', 'moment', 'DTOptionsBuilder', '$location', function($scope, $http, moment, DTOptionsBuilder, $location) {
   console.log('AccountsController running');
 
   $scope.customers = [];  //"container" for the returned customer objects, which we'll use to populate customerTable
@@ -34,7 +34,7 @@ app.controller('AccountsController', ['$scope', '$http', 'moment', 'DTOptionsBui
 
   //function to get all customers from DB to populate the DOM
   function getCustomers() {
-    $http.get('/accounts').then(function(response) {
+    $http.get('/accounts/customers').then(function(response) {
       response.data.forEach(function (customer) {
         customer.eventDate = moment.utc(customer.eventDate).format('MM-DD-YYYY');
       });
