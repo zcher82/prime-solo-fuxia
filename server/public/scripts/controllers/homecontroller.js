@@ -16,7 +16,7 @@ app.controller('HomeController', ['$scope', '$http', '$window', '$location', fun
         if(response.data.username) {
           console.log('success: ', response.data);
           // location works with SPA (ng-route)
-          $location.path('/user');
+          $location.path('/userlanding');
         } else {
           console.log('failure: ', response);
           $scope.message = "Wrong!!";

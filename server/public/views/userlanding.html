@@ -21,7 +21,8 @@
 
   <section id="landing-body">
     <div class="customer-flower-basket">
-      <h4>Welcome!</h4>
+      <h4>Welcome {{user.username}}</h4>
+      <button type="button" name="update-client-info" ng-click="updateInfo">Update info</button>
       <h5>Your flower basket contains:</h5>
       <div class="basket-contents">
 
