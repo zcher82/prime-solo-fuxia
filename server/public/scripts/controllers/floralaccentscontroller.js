@@ -7,6 +7,7 @@ app.controller('FloralAccentsController', ['$scope', '$http', '$modal', function
   getAccents();
   getGreens();
 
+  //GET accent flowers from database
   function getAccents() {
     $http.get('/accents')
       .then(function(response){
@@ -15,6 +16,7 @@ app.controller('FloralAccentsController', ['$scope', '$http', '$modal', function
       });
   }
 
+  //Get greens from database
   function getGreens() {
     $http.get('/accents/green')
       .then(function(response){
@@ -23,7 +25,7 @@ app.controller('FloralAccentsController', ['$scope', '$http', '$modal', function
       });
   }
 
-
+  //MODAL display function, called when picture of image is clicked on
   $scope.displayAccentsModal = function(id) {
     var correctAccent
     var a = $scope.accents;
@@ -33,7 +35,7 @@ app.controller('FloralAccentsController', ['$scope', '$http', '$modal', function
     console.log('mainCtrl', allAccents);
     angular.forEach(allAccents, function (accent) {
       if (id === accent._id) {
-        correctAccent = accent
+        correctAccent = accent;
       }
     });
     var modalInstance = $modal.open({

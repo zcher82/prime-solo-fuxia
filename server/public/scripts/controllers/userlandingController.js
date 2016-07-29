@@ -1,4 +1,4 @@
-app.controller('UserlandingController', ['$scope', '$http', '$window', '$location', function($scope, $http, $window, $location) {
+app.controller('UserlandingController', ['$scope', '$http', '$window', '$location', '$modal', function($scope, $http, $window, $location, $modal) {
 
   $scope.user = {};
   $scope.userInfoNew = {};
@@ -17,8 +17,12 @@ app.controller('UserlandingController', ['$scope', '$http', '$window', '$locatio
     });
   }
 
-  $scope.updateInfo = function() {
+  $scope.updateInfo = function(id) {
+    var modalInstance = $modal.open({
+      templateUrl: '../views/templates/updateModalView.html',
+      controller: 'UpdateModalCtrl',
 
+    });
   }
 
   $scope.logout = function() {

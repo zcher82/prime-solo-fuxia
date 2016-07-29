@@ -1,3 +1,7 @@
+/** {
+  border: 1px dotted blue;
+}*/
+
 * {
   margin: 0;
   padding: 0;
@@ -15,4 +19,22 @@
   font-family: palatino;
   padding: 1px;
   margin-top: 40px;
+}
+
+.customer-flower-basket {
+  margin: 20px;
+}
+/*
+.update-form {
+  background-color: lightblue;
+  padding: 0 20px 0 20px;
+}*/
+
+.updateUserInfo label, input {
+  display: block;
+  font-family: palatino;
+}
+
+#add-to-basket {
+  float: left;
 }
