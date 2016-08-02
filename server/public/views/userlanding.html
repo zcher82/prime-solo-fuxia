@@ -20,10 +20,15 @@
 
 
   <section id="landing-body">
+    <h4>Welcome {{user.username}}</h4>
+    <button type="button" name="update-client-info" ng-click="updateInfo(user._id)">Update info</button>
     <div class="customer-flower-basket">
-      <h4>Welcome {{user.username}}</h4>
-      <button type="button" name="update-client-info" ng-click="updateInfo(user._id)">Update info</button>
       <h5>Your flower basket contains:</h5>
+      <ul ng-repeat-"item in user.basket">
+        <li>{{item.flower}}</li>
+        <li>{{item.quantity}}</li>
+        <li>{{item.color}}</li>
+      </ul>
       <div class="basket-contents">
 
       </div>

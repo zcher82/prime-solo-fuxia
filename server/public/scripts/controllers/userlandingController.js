@@ -1,9 +1,9 @@
 app.controller('UserlandingController', ['$scope', '$http', '$window', '$location', '$modal', function($scope, $http, $window, $location, $modal) {
 
   $scope.user = {};
-  $scope.userInfoNew = {};
 
   getUser();
+
 
   function getUser() {
     $http.get('/userlanding')
