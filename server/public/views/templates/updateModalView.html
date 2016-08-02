@@ -2,32 +2,53 @@
     <h3>Edit Personal Info</h3>
 </div>
 <div class="modal-body">
-  <div class="update-form">
-    <form class="updateUserInfo">
-      <label for="fName">First Name</label>
-      <input type="text" name="fName">
+  <table class="updateUserInfo">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td><input type="text" name="firstName" ng-model="newInfo.firstName"></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><input type="text" name="lastName" ng-model="newInfo.lastName"></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" name="email" ng-model="newInfo.email"></td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td><input type="tel" name="phone" ng-model="newInfo.phone"></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" name="address" ng-model="newInfo.address"></td>
+      </tr>
+      <tr>
+        <td>Event Type</td>
+        <td><input type="text" name="event" placeholder="wedding, birthday, etc..." ng-model="newInfo.event"></td>
+      </tr>
+      <tr>
+        <td>Event Date</td>
+        <td><input type="date" name="eventDate" ng-model="newInfo.eventDate"></td>
+      </tr>
+    </tbody>
+  </table>
 
-      <label for="lName">Last Name</label>
-      <input type="text" name="lName">
-
-      <label for="email">Email</label>
-      <input type="email" name="email">
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" name="phone">
-
-      <label for="address">Address</label>
-      <input type="text" name="address">
-
-      <label for="event">Event</label>
-      <input type="text" name="event" placeholder="wedding, birthday, etc...">
-
-      <br>
-
-      <button button class="btn btn-info" name="submitEdits" ng-click="sumbitEdits(user._id)">Submit</button>
-    </form>
+  <div class="commentBox">
+    <label for="comments">Comments</label>
+    <textarea class="comments" placeholder="ex. be at church by noon..." ng-model="newInfo.comments"></textarea>
   </div>
+
+
 </div>
 <div class="modal-footer">
-    <button class="btn btn-info" ng-click="closeModal()">Close</button>
+  <button class="btn btn-info" id="updateButton" ng-click="updateUserInfo">Update Info</button>
+  <button class="btn btn-info" id="closeModal" ng-click="closeModal()">Close</button>
 </div>
