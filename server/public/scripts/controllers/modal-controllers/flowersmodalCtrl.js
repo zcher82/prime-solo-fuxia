@@ -11,7 +11,8 @@ app.controller('ModalCtrl', ['$modalInstance', '$scope', 'correctFlower',
 
   $scope.addToBasket = function(id) {
     console.log(user._id);
-    $http.put('/flowers').then(function(response) {
+    $http.put('/flowers')
+      .then(function(response) {
       console.log('PUT', response);
     });
   }

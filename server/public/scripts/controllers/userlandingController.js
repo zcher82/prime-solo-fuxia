@@ -18,9 +18,15 @@ app.controller('UserlandingController', ['$scope', '$http', '$window', '$locatio
   }
 
   $scope.updateInfo = function(id) {
+    var user = $scope.user;
     var modalInstance = $modal.open({
       templateUrl: '../views/templates/updateModalView.html',
       controller: 'UpdateModalCtrl',
+      resolve: {
+        user: function() {
+          return user;
+        }
+      }
 
     });
   }

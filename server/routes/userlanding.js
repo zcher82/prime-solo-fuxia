@@ -21,4 +21,29 @@ router.get('/', function(req, res) {
   }
 });
 
+router.put('/update/:id', function (req, res) {
+  var id = req.params.id;
+  var newInfo = req.body;
+
+  User.findById(id, function (err, user) {
+    console.log(user);
+    if (err) {
+      res.sendStatus(500);
+      return;
+    }
+
+    user.accountinfo.pop();
+    user.accountinfo.push(newInfo);
+    user.save(function (err) {
+      console.log(user);
+      if (err) {
+        res.sendStatus(500);
+        return;
+      }
+
+      res.sendStatus(204);
+    });
+  });
+});
+
 module.exports = router;

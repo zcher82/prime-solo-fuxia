@@ -32,7 +32,7 @@
       </tr>
       <tr>
         <td>Event Type</td>
-        <td><input type="text" name="event" placeholder="wedding, birthday, etc..." ng-model="newInfo.event"></td>
+        <td><input type="text" name="event" ng-model="newInfo.event" placeholder="wedding, birthday, etc..."></td>
       </tr>
       <tr>
         <td>Event Date</td>
@@ -49,6 +49,6 @@
 
 </div>
 <div class="modal-footer">
-  <button class="btn btn-info" id="updateButton" ng-click="updateUserInfo">Update Info</button>
+  <button class="btn btn-info" id="updateButton" ng-click="updateUserInfo(user._id)">Update Info</button>
   <button class="btn btn-info" id="closeModal" ng-click="closeModal()">Close</button>
 </div>
