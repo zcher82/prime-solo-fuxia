@@ -23,7 +23,7 @@ app.controller('FlowersController', ['$scope', '$http', '$modal', function($scop
             $scope.photos.push(value);
           });
         });
-      
+
       });
   }
 
@@ -35,9 +35,9 @@ app.controller('FlowersController', ['$scope', '$http', '$modal', function($scop
     console.log('1st', id);
     angular.forEach($scope.flowers, function (flower) {
       if (id === flower.images[0]._id) {
-        console.log(flower);
+        // console.log(flower);
         correctFlower = flower;
-        console.log(correctFlower);
+        // console.log(correctFlower);
       }
     });
     var modalInstance = $modal.open({

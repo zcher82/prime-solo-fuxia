@@ -21,6 +21,8 @@ router.get('/', function(req, res) {
   }
 });
 
+
+//Update customer info by finding correct user (user) and pushing newInfo into user.accountinfo
 router.put('/update/:id', function (req, res) {
   var id = req.params.id;
   var newInfo = req.body;

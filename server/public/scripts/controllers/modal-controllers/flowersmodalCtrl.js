@@ -1,7 +1,10 @@
-app.controller('ModalCtrl', ['$modalInstance', '$scope', 'correctFlower',
-  function ($modalInstance, $scope, correctFlower) {
+app.controller('ModalCtrl', ['$modalInstance', '$scope', '$http', 'correctFlower', 'userData',
+  function ($modalInstance, $scope, $http, correctFlower, userData) {
 
+    var user = {};
+    userData.getUser();
     $scope.correctFlower = correctFlower;
+    console.log(user);
 
 
     // console.log('modal', correctFlower);
@@ -10,7 +13,7 @@ app.controller('ModalCtrl', ['$modalInstance', '$scope', 'correctFlower',
   };
 
   $scope.addToBasket = function(id) {
-    console.log(user._id);
+    console.log(id);
     $http.put('/flowers')
       .then(function(response) {
       console.log('PUT', response);
