@@ -6,24 +6,28 @@ var User = require('../models/user');
 var Flower = require('../models/flowerdb');
 
 //adding a flower into customer's basket
-router.put('/', function (req, res) {
+router.put('/:id', function (req, res) {
   var id = req.params.id;
-  Flower.findById(id, function (err, flower) {
-    console.log(flower);
-    if (err) {
-      res.sendStatus(500);
-      return;
-    }
+  var userId = req.body._id;
+  console.log(userId);
 
-    user.basket.push(flower);
-    user.save(function (err) {
-      console.log(user);
+  User.findById(userId, function (err, user) {
+    Flower.findById(id, function (err, flower) {
+      console.log(flower);
       if (err) {
         res.sendStatus(500);
         return;
       }
 
-      res.sendStatus(204);
+      user.basket.push(flower);
+      user.save(function (err) {
+        console.log(user);
+        if (err) {
+          res.sendStatus(500);
+          return;
+        }
+        res.sendStatus(204);
+      });
     });
   });
 

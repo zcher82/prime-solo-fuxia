@@ -16,10 +16,6 @@ app.config(['$routeProvider', function($routeProvider) {
     templateUrl: '/views/userlanding.html',
     controller: "UserlandingController"
     })
-    // .when('/home', {
-    //   templateUrl: '/views/home.html',
-    //   controller: 'HomeController'
-    // })
     .when('/accounts', {
       templateUrl: '/views/accounts.html',
       controller: 'AccountsController'

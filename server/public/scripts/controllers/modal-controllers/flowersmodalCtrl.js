@@ -1,10 +1,23 @@
-app.controller('ModalCtrl', ['$modalInstance', '$scope', '$http', 'correctFlower', 'userData',
-  function ($modalInstance, $scope, $http, correctFlower, userData) {
+app.controller('ModalCtrl', ['$modalInstance', '$scope', '$http', 'correctFlower', 'userData', '$location',
+  function ($modalInstance, $scope, $http, correctFlower, userData, $location) {
 
-    var user = {};
-    userData.getUser();
     $scope.correctFlower = correctFlower;
-    console.log(user);
+    $scope.user = {};
+
+    getUser();
+
+
+    function getUser() {
+      $http.get('/userlanding')
+        .then(function(response) {
+          if(response.data.username) {
+              $scope.user = response.data;
+              console.log('GET user', $scope.user);
+          } else {
+              $location.path("/home");
+          }
+      });
+    }
 
 
     // console.log('modal', correctFlower);
@@ -13,8 +26,10 @@ app.controller('ModalCtrl', ['$modalInstance', '$scope', '$http', 'correctFlower
   };
 
   $scope.addToBasket = function(id) {
+    var userId = $scope.user._id;
     console.log(id);
-    $http.put('/flowers')
+    console.log(userId);
+    $http.put('/flowers/' + id, userId)
       .then(function(response) {
       console.log('PUT', response);
     });
